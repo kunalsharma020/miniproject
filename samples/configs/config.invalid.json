@@ -1,0 +1,5 @@
+{
+  "service": { "name": "", "port": 70000 },
+  "features": { "flags": { "audit": "yes" } }
+}
+

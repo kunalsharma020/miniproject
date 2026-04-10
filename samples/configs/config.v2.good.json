@@ -1,0 +1,5 @@
+{
+  "service": { "name": "billing", "port": 3000 },
+  "features": { "flags": { "audit": true, "export": true } }
+}
+

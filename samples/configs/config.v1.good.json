@@ -1,0 +1,6 @@
+{
+  "serviceName": "billing",
+  "port": 3000,
+  "features": ["audit", "export"]
+}
+

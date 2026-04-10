@@ -1,0 +1,16 @@
+{
+  "$id": "config-schema-v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["serviceName", "port", "features"],
+  "properties": {
+    "serviceName": { "type": "string", "minLength": 1 },
+    "port": { "type": "integer", "minimum": 1, "maximum": 65535 },
+    "features": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    }
+  }
+}
+

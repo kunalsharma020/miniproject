@@ -1,0 +1,42 @@
+{
+  "name": "configuration-management-system-with-validation",
+  "version": "1.0.0",
+  "description": "Configuration Management System with Validation (Express + MongoDB + AJV)",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "lint": "node -c src/server.js",
+    "seed": "node scripts/seed-schemas.js",
+    "export:latest": "node scripts/export-latest-config.js",
+    "validate:config": "node scripts/validate-config.js"
+  },
+  "keywords": [
+    "config",
+    "configuration",
+    "validation",
+    "ajv",
+    "express",
+    "mongoose"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "helmet": "^7.1.0",
+    "mongodb-memory-server": "^10.1.4",
+    "mongoose": "^8.12.1",
+    "morgan": "^1.10.0",
+    "pino": "^9.6.0",
+    "pino-pretty": "^13.0.0",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
+
