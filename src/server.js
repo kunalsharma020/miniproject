@@ -9,6 +9,16 @@ async function start() {
   await connectMongo();
 
   const server = http.createServer(app);
+
+  server.on('error', (err) => {
+    if (err.code === 'EADDRINUSE') {
+      logger.error({ port: PORT, err }, `Port ${PORT} already in use`);
+      process.exit(1);
+    }
+    logger.error({ err }, 'Server error');
+    process.exit(1);
+  });
+
   server.listen(PORT, () => {
     logger.info({ port: PORT }, 'Server listening');
   });

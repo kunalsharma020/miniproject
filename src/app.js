@@ -4,6 +4,8 @@ const express = require('express');
 const helmet = require('helmet');
 const morgan = require('morgan');
 
+const cors = require('cors');
+
 const { logger } = require('./utils/logger');
 const { apiKeyAuth } = require('./middleware/apiKeyAuth');
 const { notFound } = require('./middleware/notFound');
@@ -15,6 +17,7 @@ const schemaRoutes = require('./routes/schemaRoutes');
 const app = express();
 
 app.disable('x-powered-by');
+app.use(cors());
 app.use(helmet());
 app.use(express.json({ limit: '1mb' }));
 
