@@ -2,7 +2,7 @@
 
 Full-stack backend project using **Node.js (Express)**, **MongoDB (Mongoose)**, and **JSON Schema validation (AJV)**.
 
-### Features
+### Features 
 
 - **Upload config**: `POST /config`
 - **Validate before saving** using JSON Schema (AJV)
