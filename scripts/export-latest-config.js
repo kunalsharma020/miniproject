@@ -1,11 +1,16 @@
 require('dotenv').config();
 
 const fs = require('fs');
+
 const path = require('path');
 
+
 const { connectMongo } = require('../src/utils/mongo');
+
 const { logger } = require('../src/utils/logger');
+
 const { getActiveConfig } = require('../src/services/configVersioning');
+
 
 async function main() {
   await connectMongo();
