@@ -17,12 +17,16 @@ async function main() {
     fs.readFileSync(path.join(__dirname, '..', 'samples', 'schemas', 'schema.v2.json'), 'utf8')
   );
 
+
+  
   await SchemaVersion.findOneAndUpdate(
     { version: 'v1' },
     { $set: { version: 'v1', jsonSchema: v1 } },
     { upsert: true, new: true }
   );
 
+
+  
   await SchemaVersion.findOneAndUpdate(
     { version: 'v2' },
     { $set: { version: 'v2', jsonSchema: v2, previousVersion: 'v1', migrationKey: 'v1_to_v2' } },
